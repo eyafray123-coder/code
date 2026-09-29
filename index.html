@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing cards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page" id="plans"></main>
+    <script src="card.js"></script>
+    <script>
+      const plans = [
+        {
+          title: "Basic Plan",
+          price: "$9.99 /month",
+          features: ["1 GB Storage", "Basic Support", "All Core Features"],
+        },
+        {
+          title: "Pro Plan",
+          price: "$19.99 /month",
+          features: [
+            "50 GB Storage",
+            "Priority Support",
+            "All Core Features",
+            "Team Seats",
+          ],
+        },
+        {
+          title: "Enterprise",
+          price: "$49.99 /month",
+          features: [
+            "Unlimited Storage",
+            "Dedicated Support",
+            "SSO & Audit Logs",
+          ],
+        },
+      ];
+      const mount = document.getElementById("plans");
+      for (const plan of plans) {
+        mount.appendChild(Card(plan.title, plan.price, plan.features));
+      }
+    </script>
+  </body>
+</html>
