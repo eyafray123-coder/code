@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <div>
+          <p class="subtitle">Stay organized</p>
+          <h1>My Tasks</h1>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" type="button">🌙</button>
+      </header>
+
+      <!-- Add Task -->
+      <form id="todoForm" class="todo-form">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+        />
+
+        <button type="submit">Add Task</button>
+      </form>
+
+      <!-- Task Information -->
+      <div class="task-info">
+        <span id="taskCount"> 0 tasks </span>
+
+        <button id="clearCompleted" type="button">Clear completed</button>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all" type="button">
+          All
+        </button>
+
+        <button class="filter-btn" data-filter="active" type="button">
+          Active
+        </button>
+
+        <button class="filter-btn" data-filter="completed" type="button">
+          Completed
+        </button>
+      </div>
+
+      <!-- Todo List -->
+      <ul id="todoList" class="todo-list"></ul>
+
+      <!-- Empty Message -->
+      <div id="emptyMessage" class="empty-message">
+        <div class="empty-icon">✓</div>
+
+        <h2>No tasks yet</h2>
+
+        <p>Add a task above and start getting things done.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
